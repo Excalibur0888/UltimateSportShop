@@ -1,0 +1,182 @@
+/* Улучшения для адаптивности на мобильных устройствах */
+
+/* Исправления для hero-секций, чтобы они отображались сразу */
+.hero .reveal-left,
+.hero .reveal-right,
+.hero .reveal-text,
+.hero .reveal-image,
+.app-hero .reveal-left,
+.app-hero .reveal-right,
+.app-hero .reveal-text,
+.app-hero .reveal-image,
+.app-section .reveal-left,
+.app-section .reveal-right,
+.app-section .reveal-text,
+.app-section .reveal-image {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    animation: none !important;
+}
+
+/* Улучшения для секции приложения на мобильных устройствах */
+@media (max-width: 768px) {
+    .app-section {
+        padding: 3rem 1rem !important;
+    }
+    
+    .app-content {
+        grid-template-columns: 1fr !important;
+        text-align: center !important;
+        gap: 2rem !important;
+    }
+    
+    .app-features {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1.5rem !important;
+        margin-bottom: 2rem !important;
+        justify-content: center !important;
+    }
+    
+    .feature-item {
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        margin: 0 !important;
+        text-align: center !important;
+    }
+    
+    .feature-icon {
+        margin: 0 auto 0.5rem auto !important;
+        margin-right: 0 !important;
+    }
+    
+    .feature-item span {
+        display: block !important;
+        text-align: center !important;
+        width: 100% !important;
+    }
+    
+    /* Центрирование иконок в секции приложения */
+    .benefit-item, 
+    .capability-card {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+    
+    .benefit-icon, 
+    .capability-icon {
+        margin: 0 auto 0.5rem auto !important;
+    }
+    
+    .benefit-item h3, 
+    .capability-card h3,
+    .benefit-item p, 
+    .capability-card p {
+        text-align: center !important;
+    }
+    
+    /* Дополнительные исправления для страницы app */
+    .app-hero .container {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        padding: 2rem 1rem !important;
+    }
+    
+    .app-hero-content {
+        text-align: center !important;
+        margin-bottom: 2rem !important;
+    }
+    
+    .app-preview {
+        margin: 0 auto !important;
+        max-width: 300px !important;
+    }
+    
+    .app-preview img {
+        max-width: 100% !important;
+        height: auto !important;
+        border-radius: 10px !important;
+    }
+    
+    .capabilities-grid,
+    .benefits-grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+    }
+    
+    .capability-card {
+        padding: 1.5rem !important;
+        margin-bottom: 1rem !important;
+    }
+    
+    .app-cta {
+        padding: 3rem 1rem !important;
+    }
+    
+    .cta-content {
+        text-align: center !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .app-features {
+        grid-template-columns: 1fr !important;
+        gap: 1rem !important;
+    }
+    
+    .app-text h2 {
+        font-size: 1.8rem !important;
+    }
+    
+    .app-text p {
+        font-size: 0.9rem !important;
+        margin-bottom: 1.2rem !important;
+    }
+    
+    .feature-item {
+        padding: 0.5rem !important;
+    }
+    
+    .feature-icon {
+        width: 40px !important;
+        height: 40px !important;
+        margin: 0 auto 0.5rem auto !important;
+    }
+    
+    .feature-icon img {
+        width: 20px !important;
+        height: 20px !important;
+    }
+    
+    .btn-download-app {
+        width: 100% !important;
+        max-width: 200px !important;
+        margin: 0.5rem auto !important;
+        padding: 0.7rem 1.2rem !important;
+        font-size: 0.9rem !important;
+    }
+    
+    /* Дополнительные исправления для маленьких экранов */
+    .app-hero-content h1 {
+        font-size: 2rem !important;
+    }
+    
+    .app-hero-content p {
+        font-size: 1rem !important;
+    }
+    
+    .section-title h2 {
+        font-size: 1.8rem !important;
+    }
+    
+    .section-title p {
+        font-size: 0.9rem !important;
+    }
+} 

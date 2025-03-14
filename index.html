@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+		<link rel="icon" href="images/favicon.png" type="image/png">
+		<meta name="description" content="UltimateSportShop - Your Premium Sports Equipment Store">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UltimateSportShop - Your Premium Sports Equipment Store</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/mobile-fixes.css">
+    <link rel="stylesheet" href="css/icon-fixes.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="/">UltimateSportShop</a>
+            </div>	
+            <div class="burger-menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/catalog">Catalog</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/app">App</a></li>
+                    <li class="cart-icon">
+                        <a href="/cart">
+                            <span class="cart-count">0</span>
+                            <svg viewBox="0 0 24 24" width="32" height="32">
+                                <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="menu-overlay"></div>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-text reveal-left">
+                    <h1>Welcome to UltimateSportShop</h1>
+                    <p>Your one-stop destination for premium sports equipment and accessories.</p>
+                    <div class="hero-buttons">
+                        <a href="/app" class="btn-primary">Download App</a>
+                        <a href="/catalog" class="btn-secondary">Shop Now</a>
+                    </div>
+                </div>
+                <div class="hero-image reveal-right">
+                    <img src="images/hero-image.jpg" alt="Sports Equipment">
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-products">
+            <div class="section-title">
+                <h2>Featured Products</h2>
+                <p>Check out our most popular sports equipment</p>
+            </div>
+            <div class="home-products-grid">
+                <div class="home-product-card">
+                    <div class="product-image">
+                        <img src="images/shoes1.jpg" alt="Running Shoes">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Professional Running Shoes</h3>
+                        <p class="product-price">₹4,999</p>
+                        <button class="add-to-cart" data-id="1" data-name="Professional Running Shoes" data-price="4999" data-image="images/shoes1.jpg">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="home-product-card">
+                    <div class="product-image">
+                        <img src="images/ball1.jpg" alt="Football">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Premium Football</h3>
+                        <p class="product-price">₹2,499</p>
+                        <button class="add-to-cart" data-id="2" data-name="Premium Football" data-price="2499" data-image="images/ball1.jpg">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="home-product-card">
+                    <div class="product-image">
+                        <img src="images/racket1.jpg" alt="Tennis Racket">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Tennis Racket Pro</h3>
+                        <p class="product-price">₹3,999</p>
+                        <button class="add-to-cart" data-id="3" data-name="Tennis Racket Pro" data-price="3999" data-image="images/racket1.jpg">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="app-section">
+            <div class="app-content">
+                <div class="app-text">
+                    <h2>Get the UltimateSportShop App</h2>
+                    <p>Download our mobile app for exclusive deals, easy shopping, and personalized recommendations.</p>
+                    <div class="app-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <img src="images/icons/target.svg" alt="Exclusive Deals" width="36" height="36">
+                            </div>
+                            <span>Exclusive Deals</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <img src="images/icons/truck.svg" alt="Fast Delivery" width="36" height="36">
+                            </div>
+                            <span>Fast Delivery</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <img src="images/icons/credit-card.svg" alt="Easy Payment" width="36" height="36">
+                            </div>
+                            <span>Easy Payment</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <img src="images/icons/gift.svg" alt="Rewards Program" width="36" height="36">
+                            </div>
+                            <span>Rewards Program</span>
+                        </div>
+                    </div>
+                    <div class="app-buttons">
+                        <a href="/app" class="btn-download-app">
+                            <img src="images/icons/download.svg" alt="Download" width="32" height="32">
+                            Download App
+                        </a>
+                    </div>
+                </div>
+                <div class="app-image">
+                    <img src="images/app-preview.jpg" alt="UltimateSportShop App">
+                </div>
+            </div>
+        </section>
+
+        <section class="brands-section">
+            <div class="container">
+                <div class="section-title reveal-text">
+                    <h2>Brands We Carry</h2>
+                    <p>We partner with the world's leading sports brands</p>
+                </div>
+                <div class="brands-container reveal-scale">
+                    <div class="brand-logo reveal-card delay-1">
+                        <img src="images/velocite.jpg" alt="Velocite">
+                    </div>
+                    <div class="brand-logo reveal-card delay-2">
+                        <img src="images/zenithsport.jpg" alt="ZenithSport">
+                    </div>
+                    <div class="brand-logo reveal-card delay-3">
+                        <img src="images/aerofit.jpg" alt="AeroFit">
+                    </div>
+                    <div class="brand-logo reveal-card delay-4">
+                        <img src="images/titanforce.jpg" alt="TitanForce">
+                    </div>
+                    <div class="brand-logo reveal-card delay-5">
+                        <img src="images/pulsewave.jpg" alt="PulseWave">
+                    </div>
+                    <div class="brand-logo reveal-card delay-6">
+                        <img src="images/alphastreak.jpg" alt="AlphaStreak">
+                    </div>
+                    <div class="brand-logo reveal-card delay-7">
+                        <img src="images/novapeak.jpg" alt="NovaPeak">
+                    </div>
+                    <div class="brand-logo reveal-card delay-8">
+                        <img src="images/dynamix.jpg" alt="Dynamix">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="seasonal-promotions">
+            <div class="container">
+                <div class="section-title reveal-text">
+                    <h2>Seasonal Promotions</h2>
+                    <p>Limited-time offers on seasonal sports equipment</p>
+                </div>
+                <div class="promotions-grid">
+                    <div class="promotion-card reveal-card delay-1">
+                        <div class="promotion-image">
+                            <img src="images/summer-sale.jpg" alt="Summer Sale">
+                            <div class="promotion-badge">30% OFF</div>
+                        </div>
+                        <div class="promotion-content">
+                            <h3>Summer Sports Sale</h3>
+                            <p>Get ready for summer with our exclusive collection of swimming, tennis, and outdoor equipment.</p>
+                            <a href="/catalog" class="promotion-btn">Shop Now</a>
+                        </div>
+                    </div>
+                    <div class="promotion-card reveal-card delay-2">
+                        <div class="promotion-image">
+                            <img src="images/fitness-collection.jpg" alt="Fitness Collection">
+                            <div class="promotion-badge">NEW</div>
+                        </div>
+                        <div class="promotion-content">
+                            <h3>Fitness Collection</h3>
+                            <p>Discover our new fitness collection with the latest equipment for your home gym and workout routines.</p>
+                            <a href="/catalog" class="promotion-btn">Explore</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="customer-reviews">
+            <div class="container">
+                <div class="section-title reveal-text">
+                    <h2>What Our Customers Say</h2>
+                    <p>Read reviews from our satisfied customers</p>
+                </div>
+                <div class="reviews-slider reveal-card">
+                    <div class="review-slide active">
+                        <div class="review-content">
+                            <div class="review-stars">
+                                <span class="star"><img src="images/icons/star-filled.svg" alt="Star" width="24" height="24"></span>
+                                <span class="star"><img src="images/icons/star-filled.svg" alt="Star" width="24" height="24"></span>
+                                <span class="star"><img src="images/icons/star-filled.svg" alt="Star" width="24" height="24"></span>
+                                <span class="star"><img src="images/icons/star-filled.svg" alt="Star" width="24" height="24"></span>
+                                <span class="star"><img src="images/icons/star-filled.svg" alt="Star" width="24" height="24"></span>
+                            </div>
+                            <p>"I've been shopping at UltimateSportShop for years and have always been impressed with their quality products and excellent customer service. The new website makes shopping even easier!"</p>
+                            <div class="review-author">
+                                <div class="author-image">
+                                    <img src="images/customer1.jpg" alt="Customer">
+                                </div>
+                                <div class="author-info">
+                                    <h4>Rajesh Kumar</h4>
+                                    <p>Mumbai, India</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-slide">
+                        <div class="review-content">
+                            <div class="review-stars">
+                                <span class="star"><img src="images/icons/star-filled.svg" alt="Star" width="24" height="24"></span>
+                                <span class="star"><img src="images/icons/star-filled.svg" alt="Star" width="24" height="24"></span>
+                                <span class="star"><img src="images/icons/star-filled.svg" alt="Star" width="24" height="24"></span>
+                                <span class="star"><img src="images/icons/star-filled.svg" alt="Star" width="24" height="24"></span>
+                                <span class="star"><img src="images/icons/star-filled.svg" alt="Star" width="24" height="24"></span>
+                            </div>
+                            <p>"The delivery was incredibly fast, and the products exceeded my expectations. I particularly love the range of tennis equipment they offer. Will definitely be shopping here again!"</p>
+                            <div class="review-author">
+                                <div class="author-image">
+                                    <img src="images/customer2.jpg" alt="Customer">
+                                </div>
+                                <div class="author-info">
+                                    <h4>Amit Patel</h4>
+                                    <p>Mumbai, India</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-slide">
+                        <div class="review-content">
+                            <div class="review-stars">
+                                <span class="star"><img src="images/icons/star-filled.svg" alt="Star" width="24" height="24"></span>
+                                <span class="star"><img src="images/icons/star-filled.svg" alt="Star" width="24" height="24"></span>
+                                <span class="star"><img src="images/icons/star-filled.svg" alt="Star" width="24" height="24"></span>
+                                <span class="star"><img src="images/icons/star-filled.svg" alt="Star" width="24" height="24"></span>
+                                <span class="star half"><img src="images/icons/star-half.svg" alt="Half Star" width="24" height="24"></span>
+                            </div>
+                            <p>"As a professional trainer, I need reliable equipment for my clients. UltimateSportShop has never let me down. Their product range is extensive, and the quality is consistently high."</p>
+                            <div class="review-author">
+                                <div class="author-image">
+                                    <img src="images/customer3.jpg" alt="Customer">
+                                </div>
+                                <div class="author-info">
+                                    <h4>David Rodriguez</h4>
+                                    <p>Dehli, India</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="reviews-controls">
+                    <button class="review-prev"><img src="images/icons/arrow-left.svg" alt="Previous" width="24" height="24"></button>
+                    <div class="review-dots">
+                        <span class="dot active" data-slide="0"></span>
+                        <span class="dot" data-slide="1"></span>
+                        <span class="dot" data-slide="2"></span>
+                    </div>
+                    <button class="review-next"><img src="images/icons/arrow-right.svg" alt="Next" width="24" height="24"></button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>UltimateSportShop</h3>
+                <p>Your premium destination for sports equipment</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/catalog">Catalog</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/app">Mobile App</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Email: <a href="mailto:contact@ultimatesportshop.com">contact@ultimatesportshop.com</a></p>
+                <p>Phone: <a href="tel:+9191292981898">+91 91292-981898</a></p>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="/privacy-policy">Privacy Policy</a></li>
+                    <li><a href="/terms-conditions">Terms & Conditions</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 UltimateSportShop. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+</html> 

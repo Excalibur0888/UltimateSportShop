@@ -1,0 +1,27 @@
+/* Исправления для анимаций */
+
+/* Убираем анимацию появления с System Requirements */
+.app-system-requirements .reveal-text,
+.app-system-requirements .reveal-left,
+.app-system-requirements .reveal-right,
+.app-system-requirements .reveal-card,
+.app-system-requirements .reveal-image,
+.app-system-requirements .reveal-scale,
+.requirements-card.reveal-left,
+.requirements-card.reveal-right {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    animation: none !important;
+}
+
+/* Убираем задержки анимаций для всех элементов в секции System Requirements */
+.app-system-requirements .delay-1,
+.app-system-requirements .delay-2,
+.app-system-requirements .delay-3,
+.app-system-requirements .delay-4,
+.app-system-requirements .delay-5,
+.app-system-requirements .delay-6 {
+    transition-delay: 0s !important;
+    animation-delay: 0s !important;
+} 

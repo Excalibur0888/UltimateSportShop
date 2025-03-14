@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+		<meta name="description" content="Catalog - UltimateSportShop">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalog - UltimateSportShop</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/animations.css">
+</head>
+<body>
+	<header class="header">
+		<div class="header-container">
+				<div class="logo">
+						<a href="/">UltimateSportShop</a>
+				</div>
+				<div class="burger-menu-icon">
+						<span></span>
+						<span></span>
+						<span></span>
+				</div>
+				<nav class="main-nav">
+						<ul>
+								<li><a href="/">Home</a></li>
+								<li><a href="/catalog">Catalog</a></li>
+								<li><a href="/about">About</a></li>
+								<li><a href="/contact">Contact</a></li>
+								<li><a href="/app">App</a></li>
+								<li class="cart-icon">
+										<a href="/cart">
+												<span class="cart-count">0</span>
+												<svg viewBox="0 0 24 24" width="32" height="32">
+														<path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
+												</svg>
+										</a>
+								</li>
+						</ul>
+				</nav>
+		</div>
+</header>
+
+<div class="menu-overlay"></div>
+
+    <main class="catalog-page">
+        <div class="catalog-hero">
+            <div class="catalog-hero-content reveal-text">
+                <h1>Our Catalog</h1>
+                <p>Browse through our extensive collection of sports equipment</p>
+            </div>
+        </div>
+
+        <div class="catalog-container">
+            <div class="catalog-filters reveal-left">
+                <div class="filter-section">
+                    <h3>Categories</h3>
+                    <div class="filter-options">
+                        <div class="filter-option">
+                            <input type="checkbox" id="shoes" name="category" value="shoes">
+                            <label for="shoes">Shoes</label>
+                        </div>
+                        <div class="filter-option">
+                            <input type="checkbox" id="equipment" name="category" value="equipment">
+                            <label for="equipment">Sports Equipment</label>
+                        </div>
+                        <div class="filter-option">
+                            <input type="checkbox" id="tennis" name="category" value="tennis">
+                            <label for="tennis">Tennis</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h3>Price Range</h3>
+                    <div class="price-range">
+                        <input type="number" class="price-input" placeholder="Min" min="0">
+                        <span>-</span>
+                        <input type="number" class="price-input" placeholder="Max" min="0">
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h3>Brands</h3>
+                    <div class="filter-options">
+                        <div class="filter-option">
+                            <input type="checkbox" id="velocity" name="brand" value="velocity">
+                            <label for="velocity">Velocity</label>
+                        </div>
+                        <div class="filter-option">
+                            <input type="checkbox" id="sportex" name="brand" value="sportex">
+                            <label for="sportex">SportEx</label>
+                        </div>
+                        <div class="filter-option">
+                            <input type="checkbox" id="athletica" name="brand" value="athletica">
+                            <label for="athletica">Athletica</label>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="apply-filters">Apply Filters</button>
+                <button class="reset-filters">Reset Filters</button>
+            </div>
+
+            <div class="catalog-products">
+                <div class="catalog-header reveal-text">
+                    <h2>All Products</h2>
+                    <div class="product-count">Showing 1-6 of 24 products</div>
+                    <select class="sort-select">
+                        <option value="featured">Featured</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                    </select>
+                </div>
+
+                <div class="products-grid">
+                    <div class="product-card reveal-card delay-1">
+                        <div class="product-image">
+                            <img src="/images/shoes1.jpg" alt="Running Shoes">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Professional Running Shoes</h3>
+                            <p class="product-price">₹4,999</p>
+                            <button class="add-to-cart" data-id="1">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card reveal-card delay-2">
+                        <div class="product-image">
+                            <img src="/images/shoes2.jpg" alt="Sports Shoes">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Sports Training Shoes</h3>
+                            <p class="product-price">₹3,999</p>
+                            <button class="add-to-cart" data-id="2">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card reveal-card delay-3">
+                        <div class="product-image">
+                            <img src="/images/shoes3.jpg" alt="Tennis Shoes">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Tennis Court Shoes</h3>
+                            <p class="product-price">₹5,499</p>
+                            <button class="add-to-cart" data-id="3">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card reveal-card delay-4">
+                        <div class="product-image">
+                            <img src="/images/ball1.jpg" alt="Football">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Premium Football</h3>
+                            <p class="product-price">₹2,499</p>
+                            <button class="add-to-cart" data-id="4">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card reveal-card delay-5">
+                        <div class="product-image">
+                            <img src="/images/ball2.jpg" alt="Basketball">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Professional Basketball</h3>
+                            <p class="product-price">₹3,499</p>
+                            <button class="add-to-cart" data-id="5">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card reveal-card delay-6">
+                        <div class="product-image">
+                            <img src="/images/racket1.jpg" alt="Tennis Racket">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Tennis Racket Pro</h3>
+                            <p class="product-price">₹3,999</p>
+                            <button class="add-to-cart" data-id="6">Add to Cart</button>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card reveal-card delay-1">
+                        <div class="product-image">
+                            <img src="/images/racket2.jpg" alt="Badminton Racket">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Badminton Racket Elite</h3>
+                            <p class="product-price">₹2,799</p>
+                            <button class="add-to-cart" data-id="7">Add to Cart</button>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card reveal-card delay-2">
+                        <div class="product-image">
+                            <img src="/images/ball3.jpg" alt="Volleyball">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Competition Volleyball</h3>
+                            <p class="product-price">₹1,999</p>
+                            <button class="add-to-cart" data-id="8">Add to Cart</button>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card reveal-card delay-3">
+                        <div class="product-image">
+                            <img src="/images/shoes4.jpg" alt="Basketball Shoes">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Basketball Pro Shoes</h3>
+                            <p class="product-price">₹6,499</p>
+                            <button class="add-to-cart" data-id="9">Add to Cart</button>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card reveal-card delay-4">
+                        <div class="product-image">
+                            <img src="/images/gloves1.jpg" alt="Boxing Gloves">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Professional Boxing Gloves</h3>
+                            <p class="product-price">₹3,299</p>
+                            <button class="add-to-cart" data-id="10">Add to Cart</button>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card reveal-card delay-5">
+                        <div class="product-image">
+                            <img src="/images/yoga1.jpg" alt="Yoga Mat">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Premium Yoga Mat</h3>
+                            <p class="product-price">₹1,499</p>
+                            <button class="add-to-cart" data-id="11">Add to Cart</button>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card reveal-card delay-6">
+                        <div class="product-image">
+                            <img src="/images/weights1.jpg" alt="Dumbbells">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Adjustable Dumbbells Set</h3>
+                            <p class="product-price">₹7,999</p>
+                            <button class="add-to-cart" data-id="12">Add to Cart</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Добавленные товары (13-24) -->
+                    <div class="product-card reveal-card delay-1">
+                        <div class="product-image">
+                            <img src="/images/ball4.jpg" alt="Cricket Match Ball">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Cricket Match Ball</h3>
+                            <p class="product-price">₹1,999</p>
+                            <button class="add-to-cart" data-id="13">Add to Cart</button>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card reveal-card delay-2">
+                        <div class="product-image">
+                            <img src="/images/ball5.jpg" alt="Table Tennis Balls">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Table Tennis Balls (Pack of 6)</h3>
+                            <p class="product-price">₹899</p>
+                            <button class="add-to-cart" data-id="14">Add to Cart</button>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card reveal-card delay-3">
+                        <div class="product-image">
+                            <img src="/images/ball6.jpg" alt="Golf Balls Premium">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Golf Balls Premium (Pack of 12)</h3>
+                            <p class="product-price">₹3,999</p>
+                            <button class="add-to-cart" data-id="15">Add to Cart</button>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card reveal-card delay-4">
+                        <div class="product-image">
+                            <img src="/images/ball7.jpg" alt="Handball Competition">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Handball Competition</h3>
+                            <p class="product-price">₹2,599</p>
+                            <button class="add-to-cart" data-id="16">Add to Cart</button>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card reveal-card delay-5">
+                        <div class="product-image">
+                            <img src="/images/racket1.jpg" alt="Tennis Racket Pro">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Tennis Racket Pro</h3>
+                            <p class="product-price">₹7,999</p>
+                            <button class="add-to-cart" data-id="17">Add to Cart</button>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card reveal-card delay-6">
+                        <div class="product-image">
+                            <img src="/images/ball8.jpg" alt="Tennis Balls">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Tennis Balls (Pack of 3)</h3>
+                            <p class="product-price">₹899</p>
+                            <button class="add-to-cart" data-id="18">Add to Cart</button>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card reveal-card delay-1">
+                        <div class="product-image">
+                            <img src="/images/racket3.jpg" alt="Tennis Wristbands">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Tennis Wristbands</h3>
+                            <p class="product-price">₹599</p>
+                            <button class="add-to-cart" data-id="19">Add to Cart</button>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card reveal-card delay-2">
+                        <div class="product-image">
+                            <img src="/images/racket4.jpg" alt="Tennis Net Professional">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Tennis Net Professional</h3>
+                            <p class="product-price">₹12,999</p>
+                            <button class="add-to-cart" data-id="20">Add to Cart</button>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card reveal-card delay-3">
+                        <div class="product-image">
+                            <img src="/images/racket5.jpg" alt="Tennis Racket Beginner">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Tennis Racket Beginner</h3>
+                            <p class="product-price">₹3,999</p>
+                            <button class="add-to-cart" data-id="21">Add to Cart</button>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card reveal-card delay-4">
+                        <div class="product-image">
+                            <img src="/images/racket6.jpg" alt="Tennis Bag Pro">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Tennis Bag Pro</h3>
+                            <p class="product-price">₹4,999</p>
+                            <button class="add-to-cart" data-id="22">Add to Cart</button>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card reveal-card delay-5">
+                        <div class="product-image">
+                            <img src="/images/racket7.jpg" alt="Tennis Strings Premium">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Tennis Strings Premium</h3>
+                            <p class="product-price">₹1,499</p>
+                            <button class="add-to-cart" data-id="23">Add to Cart</button>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card reveal-card delay-6">
+                        <div class="product-image">
+                            <img src="/images/shoes5.jpg" alt="Tennis Court Shoes Elite">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Tennis Court Shoes Elite</h3>
+                            <p class="product-price">₹6,499</p>
+                            <button class="add-to-cart" data-id="24">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pagination reveal-text">
+                    <a href="#" class="page-number active">1</a>
+                    <a href="#" class="page-number">2</a>
+                    <a href="#" class="page-number">3</a>
+                    <a href="#" class="page-number">4</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+		<footer class="footer">
+			<div class="footer-content">
+					<div class="footer-section">
+							<h3>UltimateSportShop</h3>
+							<p>Your premium destination for sports equipment</p>
+					</div>
+					<div class="footer-section">
+							<h4>Quick Links</h4>
+							<ul>
+									<li><a href="/about">About Us</a></li>
+									<li><a href="/catalog">Catalog</a></li>
+									<li><a href="/contact">Contact</a></li>
+									<li><a href="/app">Mobile App</a></li>
+							</ul>
+					</div>
+					<div class="footer-section">
+							<h4>Contact</h4>
+							<p>Email: <a href="mailto:contact@ultimatesportshop.com">contact@ultimatesportshop.com</a></p>
+							<p>Phone: <a href="tel:+9191292981898">+91 91292-981898</a></p>
+					</div>
+					<div class="footer-section">
+							<h4>Legal</h4>
+							<ul>
+									<li><a href="/privacy-policy">Privacy Policy</a></li>
+									<li><a href="/terms-conditions">Terms & Conditions</a></li>
+							</ul>
+					</div>
+			</div>
+			<div class="footer-bottom">
+					<p>&copy; 2025 UltimateSportShop. All rights reserved.</p>
+			</div>
+	</footer>
+
+    <script src="/js/main.js"></script>
+    <script src="/js/animations.js"></script>
+    <script src="/js/cart.js"></script>
+</body>
+</html> 

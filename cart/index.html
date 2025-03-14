@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+		<meta name="description" content="Shopping Cart - UltimateSportShop">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - UltimateSportShop</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/animations.css">
+</head>
+<body>
+  <header class="header">
+		<div class="header-container">
+				<div class="logo">
+						<a href="/">UltimateSportShop</a>
+				</div>
+				<div class="burger-menu-icon">
+						<span></span>
+						<span></span>
+						<span></span>
+				</div>
+				<nav class="main-nav">
+						<ul>
+								<li><a href="/">Home</a></li>
+								<li><a href="/catalog">Catalog</a></li>
+								<li><a href="/about">About</a></li>
+								<li><a href="/contact">Contact</a></li>
+								<li><a href="/app">App</a></li>
+								<li class="cart-icon">
+										<a href="/cart">
+												<span class="cart-count">0</span>
+												<svg viewBox="0 0 24 24" width="32" height="32">
+														<path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
+												</svg>
+										</a>
+								</li>
+						</ul>
+				</nav>
+		</div>
+</header>
+
+<div class="menu-overlay"></div>
+
+    <main class="cart-page">
+        <section class="cart-hero">
+            <h1>Shopping Cart</h1>
+            <p>Review and manage your items</p>
+        </section>
+
+        <div class="cart-container">
+            <div class="cart-items" id="cartItems">
+                <!-- Cart items will be dynamically loaded -->
+            </div>
+
+            <div class="cart-summary">
+                <h2 class="summary-title">Order Summary</h2>
+                <div class="summary-item">
+                    <span>Subtotal</span>
+                    <span id="subtotal">₹0</span>
+                </div>
+                <div class="summary-item">
+                    <span>Shipping</span>
+                    <span>Free</span>
+                </div>
+                <div class="summary-item">
+                    <span>Tax (18%)</span>
+                    <span id="tax">₹0</span>
+                </div>
+                <div class="summary-total">
+                    <span>Total</span>
+                    <span id="total">₹0</span>
+                </div>
+                <button class="checkout-btn">Proceed to Checkout</button>
+            </div>
+        </div>
+
+        <div class="empty-cart" id="emptyCart" style="display: none;">
+            <div class="empty-cart-icon">
+                <img src="/images/icons/shopping-cart.svg" alt="Empty Cart">
+            </div>
+            <h2>Your cart is empty</h2>
+            <p>Looks like you haven't added any items to your cart yet.</p>
+            <a href="/catalog" class="continue-shopping">Continue Shopping</a>
+        </div>
+
+        <!-- Shipping Information Section -->
+        <section class="shipping-info-section">
+            <div class="container">
+                <h2 class="section-title centered">Shipping Information</h2>
+                <div class="shipping-info-grid">
+                    <div class="shipping-card">
+                        <div class="shipping-icon">
+                            <img src="/images/icons/express.svg" alt="Express Delivery" width="48" height="48">
+                        </div>
+                        <h3>Express Delivery</h3>
+                        <p>Get your order within 24-48 hours with our express delivery service. Additional charges apply.</p>
+                    </div>
+                    <div class="shipping-card">
+                        <div class="shipping-icon">
+                            <img src="/images/icons/return.svg" alt="Easy Returns" width="48" height="48">
+                        </div>
+                        <h3>Easy Returns</h3>
+                        <p>30-day easy return policy. Not satisfied with your purchase? Return it hassle-free.</p>
+                    </div>
+                    <div class="shipping-card">
+                        <div class="shipping-icon">
+                            <img src="/images/icons/secure.svg" alt="Secure Payment" width="48" height="48">
+                        </div>
+                        <h3>Secure Payment</h3>
+                        <p>All transactions are secure and encrypted. We accept all major credit cards and UPI.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- You Might Also Like Section -->
+        <section class="recommended-products-section">
+            <div class="container">
+                <h2 class="section-title centered">You Might Also Like</h2>
+                <div class="recommended-products-container">
+                    <div class="recommended-products-grid">
+                        <div class="recommended-product-card">
+                            <div class="product-image">
+                                <img src="/images/product1.jpg" alt="Running Shoes">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">Sports Water Bottle</h3>
+                                <p class="product-price">₹3,499</p>
+                                <button class="add-to-cart" data-id="101" data-name="Sports Water Bottle" data-price="3499" data-image="/images/product1.jpg">
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                        <div class="recommended-product-card">
+                            <div class="product-image">
+                                <img src="/images/product2.jpg" alt="Fitness Tracker">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">Smart Fitness Tracker</h3>
+                                <p class="product-price">₹2,999</p>
+                                <button class="add-to-cart" data-id="102" data-name="Smart Fitness Tracker" data-price="2999" data-image="/images/product2.jpg">
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                        <div class="recommended-product-card">
+                            <div class="product-image">
+                                <img src="/images/product3.jpg" alt="Yoga Mat">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">Compression Sleeves</h3>
+                                <p class="product-price">₹899</p>
+                                <button class="add-to-cart" data-id="107" data-name="Compression Sleeves" data-price="899" data-image="/images/product3.jpg">
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                        <div class="recommended-product-card">
+                            <div class="product-image">
+                                <img src="/images/product4.jpg" alt="Protein Powder">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">Whey Protein Powder</h3>
+                                <p class="product-price">₹1,899</p>
+                                <button class="add-to-cart" data-id="104" data-name="Whey Protein Powder" data-price="1899" data-image="/images/product4.jpg">
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                        <div class="recommended-product-card">
+                            <div class="product-image">
+                                <img src="/images/product5.jpg" alt="Dumbbell Set">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">Adjustable Dumbbell Set</h3>
+                                <p class="product-price">₹4,999</p>
+                                <button class="add-to-cart" data-id="105" data-name="Adjustable Dumbbell Set" data-price="4999" data-image="/images/product5.jpg">
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                        <div class="recommended-product-card">
+                            <div class="product-image">
+                                <img src="/images/product6.jpg" alt="Sports Bag">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">Waterproof Sports Bag</h3>
+                                <p class="product-price">₹1,499</p>
+                                <button class="add-to-cart" data-id="106" data-name="Waterproof Sports Bag" data-price="1499" data-image="/images/product6.jpg">
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+		<footer class="footer">
+			<div class="footer-content">
+					<div class="footer-section">
+							<h3>UltimateSportShop</h3>
+							<p>Your premium destination for sports equipment</p>
+					</div>
+					<div class="footer-section">
+							<h4>Quick Links</h4>
+							<ul>
+									<li><a href="/about">About Us</a></li>
+									<li><a href="/catalog">Catalog</a></li>
+									<li><a href="/contact">Contact</a></li>
+									<li><a href="/app">Mobile App</a></li>
+							</ul>
+					</div>
+					<div class="footer-section">
+							<h4>Contact</h4>
+							<p>Email: <a href="mailto:contact@ultimatesportshop.com">contact@ultimatesportshop.com</a></p>
+							<p>Phone: <a href="tel:+9191292981898">+91 91292-981898</a></p>
+					</div>
+					<div class="footer-section">
+							<h4>Legal</h4>
+							<ul>
+									<li><a href="/privacy-policy">Privacy Policy</a></li>
+									<li><a href="/terms-conditions">Terms & Conditions</a></li>
+							</ul>
+					</div>
+			</div>
+			<div class="footer-bottom">
+					<p>&copy; 2025 UltimateSportShop. All rights reserved.</p>
+			</div>
+	</footer>
+
+    <script src="/js/main.js"></script>
+    <script src="/js/cart.js"></script>
+</body>
+</html> 
