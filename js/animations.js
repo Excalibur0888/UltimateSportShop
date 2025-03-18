@@ -77,8 +77,26 @@ document.addEventListener('DOMContentLoaded', function() {
             
             let currentValue = start + (target - start) * easedProgress;
             
-            // Format with decimals if needed
-            if (decimals > 0) {
+            // Format with special suffixes for larger numbers
+            if (target === 1) {
+                // For 1M (1 million)
+                const displayValue = (currentValue * 1000000).toFixed(0);
+                if (displayValue >= 1000000) {
+                    element.textContent = "1M";
+                } else {
+                    const formatted = parseInt(displayValue).toLocaleString();
+                    element.textContent = formatted;
+                }
+            } else if (target === 50) {
+                // For 50K (50 thousand)
+                const displayValue = (currentValue * 1000).toFixed(0);
+                if (displayValue >= 50000) {
+                    element.textContent = "50K";
+                } else {
+                    const formatted = parseInt(displayValue).toLocaleString();
+                    element.textContent = formatted;
+                }
+            } else if (decimals > 0) {
                 element.textContent = currentValue.toFixed(decimals);
             } else {
                 element.textContent = Math.round(currentValue).toLocaleString();

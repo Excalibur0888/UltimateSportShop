@@ -49,13 +49,41 @@ class CartPage {
                     <div class="cart-item-price">₹${item.price}</div>
                 </div>
                 <div class="cart-item-quantity">
-                    <button class="quantity-btn minus" onclick="cartPage.updateQuantity(${item.id}, ${item.quantity - 1})">-</button>
+                    <button class="quantity-btn minus" data-id="${item.id}" data-quantity="${item.quantity - 1}">-</button>
                     <span class="quantity-input">${item.quantity}</span>
-                    <button class="quantity-btn plus" onclick="cartPage.updateQuantity(${item.id}, ${item.quantity + 1})">+</button>
-                    <button class="remove-item" onclick="cartPage.removeItem(${item.id})">×</button>
+                    <button class="quantity-btn plus" data-id="${item.id}" data-quantity="${item.quantity + 1}">+</button>
                 </div>
+                <button class="remove-item" data-id="${item.id}">×</button>
             </div>
         `).join('');
+        
+        // Добавляем слушатели событий для кнопок
+        const minusButtons = cartItems.querySelectorAll('.quantity-btn.minus');
+        const plusButtons = cartItems.querySelectorAll('.quantity-btn.plus');
+        const removeButtons = cartItems.querySelectorAll('.remove-item');
+        
+        minusButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const id = parseInt(button.dataset.id);
+                const quantity = parseInt(button.dataset.quantity);
+                this.updateQuantity(id, quantity);
+            });
+        });
+        
+        plusButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const id = parseInt(button.dataset.id);
+                const quantity = parseInt(button.dataset.quantity);
+                this.updateQuantity(id, quantity);
+            });
+        });
+        
+        removeButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const id = parseInt(button.dataset.id);
+                this.removeItem(id);
+            });
+        });
     }
 
     updateSummary() {
@@ -77,10 +105,6 @@ class CartPage {
     }
 
     setupEventListeners() {
-        const checkoutBtn = document.querySelector('.checkout-btn');
-        if (checkoutBtn) {
-            checkoutBtn.addEventListener('click', () => this.handleCheckout());
-        }
         
         // Setup event listeners for recommended products
         this.setupRecommendedProductsListeners();
@@ -165,7 +189,6 @@ class CartPage {
             alert('Your cart is empty!');
             return;
         }
-        alert('Thank you for your order! This is a demo site, so no actual checkout will occur.');
         this.cart.items = [];
         this.cart.saveCart();
         this.renderCartItems();
